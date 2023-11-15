@@ -3,6 +3,7 @@ pic/*
 DEM/*
 gmt.*
 topo*
+*/*.mat
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
