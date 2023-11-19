@@ -4,6 +4,8 @@ DEM/*
 gmt.*
 topo*
 */*.mat
+*.png
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
