@@ -1,0 +1,2 @@
+1. 名称为大写字母开头的代码是主函数，名称为小写字母开头的代码是子函数
+2. TextureCorrelation仅包含基于纹理相关的对流层延迟矫正方法的代码，TextureCorrelation_CompareVersion为包还含对比方法的代码
