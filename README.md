@@ -1,5 +1,3 @@
-# Yang-2024-Tropo
+## Code and Jupyte Notebooks for:
 
-Notebooks for Yang et al. (2024) on InSAR tropospheric correction based on texture correlation.
-
-+ Yang, Q., Yunjun, Z., Wang, R. Y. Heterogeneous InSAR Tropospheric Delay Correction Based on Texture Correlation, _IEEE Transactions on Geoscience and Remote Sensing_. [accepted]
++ Yang, Q., Yunjun, Z., Wang, R. Y. Heterogeneous InSAR Tropospheric Correction Based on Local Texture Correlation, _IEEE Transactions on Geoscience and Remote Sensing, 62_, doi:[10.1109/TGRS.2024.3356749](https://doi.org/10.1109/TGRS.2024.3356749).
