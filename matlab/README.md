@@ -12,7 +12,7 @@
    4) velocity.h5 (optional): 形变速率数据，用于生成掩膜，通过mintpy生成
    5) timeseries_ERA5_ramp_demErr.h5 (optional): 去除相位斜坡和DEM误差相位并用ERA5矫正对流层延迟后的相位时间序列，用于对比和参考，通过mintpy生成
 
-### Outputs (in Matlab format):
+### Outputs (in Matlab format and in rad):
    1) phase_ts_deramp.mat (compare): Original phase time series (serve as input and comparison)
    2) phase_ts_atm.mat (compare): Original phase time series after ERA5 correction.
    3) phase_ts_LLF.mat (compare): Original phase time series after local linear fitting method correction.
