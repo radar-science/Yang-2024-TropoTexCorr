@@ -20,7 +20,7 @@ The phase time series value is in the unit of meters, with a positive value for 
 The phase time series value is in the unit of radians, with a positive value for motion towards the satellite.
 
    1) phase_ts_deramp.mat (compare): Original phase time series (serve as input and comparison)
-   2) phase_ts_atm.mat (compare): Original phase time series after ERA5 correction.
+   2) phase_ts_ERA5.mat (compare): Original phase time series after ERA5 correction.
    3) phase_ts_LLF.mat (compare): Original phase time series after local linear fitting method correction.
    4) phase_ts_GLF.mat (compare): Original phase time series after global linear fitting method correction.
    5) phase_ts_HTC_low.mat: Original phase time series after texture correlation method (low-resolution module) correction.
