@@ -39,7 +39,7 @@ dem(isnan(dem)) = dem0(isnan(dem));                                        % uni
 % figure;imagesc(dem);colormap('jet')
 
 % rate form mintpy
-rate = h5read('../data/velocity.h5','/velocity')';                              % unit: m/y
+rate = h5read('../data/velocity.h5','/velocity')';                         % unit: m/y
 rate = double(rate*100);                                                   % unit: cm/y
 % figure;imagesc(rate,[-2 2]);colormap('jet')
 
