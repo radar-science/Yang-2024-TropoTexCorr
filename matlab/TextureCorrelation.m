@@ -66,10 +66,10 @@ MASK = mask_def.*MASK;
 % figure;imagesc(MASK)
 
 % phase time series after：deramping + DEM error correction + ERA5 correction
-phase_ts_atm = h5read('../data/timeseries_ERA5_ramp_demErr.h5','/timeseries');% unit: m
-phase_ts_atm = double(permute(phase_ts_atm,[2 1 3]));
-phase_ts_atm = (4*pi/lamda)*phase_ts_atm(:,:,1:N);                         % unit: rad
-phase_ts_atm = phase_ts_atm-phase_ts_atm(Na_ref,Nr_ref,:);
+phase_ts_ERA5 = h5read('../data/timeseries_ERA5_ramp_demErr.h5','/timeseries');% unit: m
+phase_ts_ERA5 = double(permute(phase_ts_ERA5,[2 1 3]));
+phase_ts_ERA5 = (4*pi/lamda)*phase_ts_ERA5(:,:,1:N);                         % unit: rad
+phase_ts_ERA5 = phase_ts_ERA5-phase_ts_ERA5(Na_ref,Nr_ref,:);
 
 % phase time series after：deramping + DEM error correction
 phase_ts_deramp = h5read('../data/timeseries_ramp_demErr.h5','/timeseries');% unit: m
@@ -144,12 +144,13 @@ title('Velocity [cm/y]');scatter(Nr_ref,Na_ref,'k','s','filled');axis off;
 
 %% Display: Time series-1D
 Na_c = 373; Nr_c = 373;                                                    % Coordinates of the point to be displayed
+% Na_c = 175; Nr_c = 182;
 
 % Original
 ts  = reshape(phase_ts_deramp(Na_c,Nr_c,:),1,N)/(4*pi/lamda)*100;          % unit: cm
 
 % ERA5
-ts0 = reshape(phase_ts_atm(Na_c,Nr_c,:),1,N)/(4*pi/lamda)*100;             % unit: cm
+ts0 = reshape(phase_ts_ERA5(Na_c,Nr_c,:),1,N)/(4*pi/lamda)*100;            % unit: cm
 coe0 = polyfit(t,ts0,1);
 
 % HTC
@@ -176,6 +177,6 @@ xlabel('Time Series');ylabel('Linear cofficient');datetick('x','yy-mmm')
 %% Display: Time series-2D
 [row,col] = submultiple(N);
 display_2D(phase_ts_deramp,mask_coh,Date,row,col,2);                       % unit: rad
-display_2D(phase_ts_atm,mask_coh,Date,row,col,2);                          % unit: rad
+display_2D(phase_ts_ERA5,mask_coh,Date,row,col,2);                         % unit: rad
 display_2D(phase_ts_HTC_low,mask_coh,Date,row,col,2);                      % unit: rad
 display_2D(phase_ts_HTC_high,mask_coh,Date,row,col,2);                     % unit: rad
