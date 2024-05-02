@@ -16,8 +16,7 @@ load colormapNew
 % About data
 N = 28;                                                                    % Number of time series SAR images
 N_ref = 2;                                                                 % Reference SAR image number
-% Na_ref = 275; Nr_ref = 215;                                              % Coordinates of the reference point: Na_ref-Azimuth; Nr_ref: Range
-Na_ref = 282; Nr_ref = 205;
+Na_ref = 282; Nr_ref = 204;                                                % Coordinates of the reference point: Na_ref-Azimuth; Nr_ref: Range
 lamda = 0.3284035;                                                         % Radar wavelength
 
 % About method
