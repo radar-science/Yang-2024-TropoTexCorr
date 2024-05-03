@@ -127,7 +127,6 @@ phase_ts_HTC = phase_ts_HTC_high;                                          % pha
 
 %% Display: Velocity
 tmp  = phase_ts_HTC;                                                       % Assign tmp the data for which the deformation rate is to be calculated
-% tmp = tmp-tmp(282,205,:);
 velocity = zeros(Na,Nr);
 for i = 1:Na
     for j = 1:Nr
